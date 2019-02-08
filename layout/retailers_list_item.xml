@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/r_retailer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/roc50dp"
+        android:orientation="horizontal"
+        android:background="?android:attr/selectableItemBackgroundBorderless">
+
+        <ImageView
+            android:id="@+id/retailer_marker"
+            android:layout_width="@dimen/roc30dp"
+            android:layout_height="@dimen/roc30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/roc5dp"
+            android:layout_weight="0"
+            android:src="@drawable/ic_prop_blue" />
+
+        <TextView
+            android:id="@+id/r_banner_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="DLF Cyber City"
+            android:textColor="@color/black"
+            android:textSize="@dimen/roc13sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/roc5dp"
+            android:layout_weight="0"
+            android:src="@drawable/ic_prop_blue" />
+
+        <TextView
+            android:id="@+id/r_openings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0"
+            android:text="15"
+            android:textColor="@color/black"
+            android:textSize="@dimen/roc13sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/roc5dp"
+            android:layout_weight="0"
+            android:src="@drawable/ic_prop_red" />
+
+        <TextView
+            android:id="@+id/r_closing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0"
+            android:text="12"
+            android:textColor="@color/black"
+            android:textSize="@dimen/roc13sp" />
+
+        <ImageView
+            android:id="@+id/r_down_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/roc5dp"
+            android:layout_marginEnd="@dimen/roc5dp"
+            android:src="@drawable/ic_arrow_down"
+            android:tint="@color/blue_2" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rocs_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/lite_gray_color"
+        android:scrollbars="vertical" />
+</LinearLayout>

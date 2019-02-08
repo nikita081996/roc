@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".activities.propertyDetail.RetailersFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_2"
+        android:paddingStart="@dimen/roc10dp"
+        android:paddingTop="@dimen/roc5dp"
+        android:paddingBottom="@dimen/roc5dp"
+        android:text="@string/openings_closings"
+        android:textColor="@color/white"
+        android:textSize="@dimen/roc15dp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/retailers_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/lite_gray_color"
+        android:scrollbars="vertical" />
+</LinearLayout>

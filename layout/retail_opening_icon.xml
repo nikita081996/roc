@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:focusable="true">
+
+    <ImageView
+        android:id="@+id/opening_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|bottom"
+        android:src="@drawable/ic_prop_blue" />
+
+    <TextView
+        android:id="@+id/roc_notification_badge_open"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/opening_logo"
+        android:background="@drawable/badge_background"
+        android:padding="@dimen/roc3dp"
+        android:text="12"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/roc8sp" />
+</RelativeLayout>

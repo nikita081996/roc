@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:focusable="true">
+
+    <ImageView
+        android:id="@+id/closing_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_prop_red" />
+
+    <TextView
+        android:id="@+id/roc_notification_badge_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/closing_logo"
+        android:background="@drawable/badge_background"
+        android:padding="@dimen/roc3dp"
+        android:text="12"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/roc8sp" />
+
+</RelativeLayout>

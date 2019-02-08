@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/top_bar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/roc56dp"
+    android:background="@color/colorPrimary"
+    android:elevation="@dimen/roc3dp"
+    android:gravity="center_vertical"
+    android:theme="@style/Base.ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:gravity="start"
+        android:paddingEnd="@dimen/roc5dp"
+        android:paddingStart="@dimen/roc10dp">
+
+        <ImageView
+            android:id="@+id/app_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_roc_logo" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/notification_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/roc10dp"
+            android:src="@drawable/ic_grad_property" />
+
+        <TextView
+            android:id="@+id/notification_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/notification_logo"
+            android:background="@drawable/notification_background"
+            android:padding="@dimen/roc3dp"
+            android:layout_margin="@dimen/roc5dp"
+            android:text="102"
+            android:textColor="@color/smoky_white"
+            android:textSize="@dimen/roc10sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/share_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/roc5dp"
+        android:src="@drawable/ic_share_img" />
+
+
+    <ImageView
+        android:id="@+id/hamburger_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/roc5dp"
+        android:src="@drawable/ic_menu_img" />
+
+
+</LinearLayout>

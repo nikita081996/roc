@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.filter.FilterCategoriesFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/roc20dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/proximity_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/blue_box"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/roc5dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_proximity" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/proximity"
+                    android:textColor="@color/blue_3"
+                    android:textSize="@dimen/roc14sp" />
+
+                <TextView
+                    android:id="@+id/proximity_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/roc3dp"
+                    android:drawableEnd="@drawable/ic_arrow_down"
+                    android:drawableTint="@color/blue_2"
+                    android:gravity="center_vertical"
+                    android:paddingRight="@dimen/roc3dp"
+                    android:text="3miles" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/date_range_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/roc10sp"
+                android:background="@drawable/blue_box"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/roc5dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_date_blue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/date_range"
+                    android:textColor="@color/blue_3"
+                    android:textSize="@dimen/roc14sp" />
+
+                <TextView
+                    android:id="@+id/date_range_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/roc3dp"
+                    android:backgroundTint="@color/blue_2"
+                    android:drawableRight="@drawable/ic_arrow_down"
+                    android:drawableTint="@color/blue_2"
+                    android:gravity="center_vertical"
+                    android:text="select date"
+                    android:textSize="@dimen/roc14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/properties_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/roc10sp"
+                android:background="@drawable/blue_box"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/roc5dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_filter_blue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/properties"
+                    android:textColor="@color/blue_3"
+                    android:textSize="@dimen/roc14sp" />
+
+                <TextView
+                    android:id="@+id/property_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/roc3dp"
+                    android:drawableRight="@drawable/ic_arrow_down"
+                    android:drawableTint="@color/blue_2"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="Not Found" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/retailers_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/roc10sp"
+                android:background="@drawable/blue_box"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/roc5dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_filter_blue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/retailers"
+                    android:textColor="@color/blue_3"
+                    android:textSize="@dimen/roc14sp" />
+
+                <TextView
+                    android:id="@+id/retailers_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/roc3dp"
+                    android:drawableRight="@drawable/ic_arrow_down"
+                    android:drawableTint="@color/blue_2"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="Not Found" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/state_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/roc10sp"
+                android:background="@drawable/blue_box"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/roc5dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_map" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/state"
+                    android:textColor="@color/blue_3"
+                    android:textSize="@dimen/roc14sp" />
+
+                <TextView
+                    android:id="@+id/state_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/roc3dp"
+                    android:drawableRight="@drawable/ic_arrow_down"
+                    android:drawableTint="@color/blue_2"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="Not Found" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/msa_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/roc10sp"
+                android:background="@drawable/blue_box"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/roc5dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_breifcase" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/msa_"
+                    android:textColor="@color/blue_3"
+                    android:textSize="@dimen/roc14sp" />
+
+                <TextView
+                    android:id="@+id/msa_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/roc3dp"
+                    android:drawableRight="@drawable/ic_arrow_down"
+                    android:drawableTint="@color/blue_2"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="coming soon" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/roc5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/roc10dp"
+            android:paddingTop="@dimen/roc12dp"
+            android:paddingEnd="@dimen/roc10dp"
+            android:paddingBottom="@dimen/roc12dp"
+           >
+
+            <RelativeLayout
+                android:id="@+id/reset_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginRight="@dimen/roc5dp"
+                android:layout_weight="1"
+                android:background="@drawable/blue_squre_box"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/roc5dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/reset"
+                    android:textColor="@color/blue_3"
+                    android:textSize="@dimen/roc14sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/apply_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/roc5dp"
+                android:layout_weight="1"
+                android:background="@color/green"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/roc5dp">
+
+                <TextView
+                    android:id="@+id/apply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:drawableRight="@drawable/ic_right_icon"
+                    android:gravity="center_vertical|center"
+                    android:text="@string/apply"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/roc14sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

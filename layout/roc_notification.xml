@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    style="?attr/actionButtonStyle"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:focusable="true">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@android:drawable/ic_popup_reminder"/>
+
+    <TextView
+        android:id="@+id/roc_notification_badge"
+        android:layout_width="@dimen/roc20dp"
+        android:layout_height="@dimen/roc20dp"
+        android:layout_gravity="right|end|top"
+        android:layout_marginEnd="-5dp"
+        android:layout_marginRight="-5dp"
+        android:layout_marginTop="@dimen/roc3dp"
+        android:background="@drawable/badge_background"
+        android:gravity="center"
+        android:padding="@dimen/roc3dp"
+        android:textColor="@android:color/white"
+        android:text="0"
+        android:textSize="@dimen/roc10sp"/>
+
+</FrameLayout>

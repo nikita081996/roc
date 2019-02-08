@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".activities.filter.FilterActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/roc10dp"
+            android:paddingTop="@dimen/roc10dp"
+            android:paddingEnd="@dimen/roc15dp"
+            android:paddingBottom="@dimen/roc10dp">
+
+            <ImageView
+                android:id="@+id/ic_back_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/roc5dp"
+                android:src="@drawable/ic_arrow_back"
+                android:tint="@color/blue_2" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/roc5dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="@string/edit_filter_selections"
+                android:textColor="@color/black"
+                android:textSize="@dimen/roc18sp" />
+        </LinearLayout>
+        <View
+            android:background="@color/gray"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/roc_point5dp"/>
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabGravity="center"
+            android:background="@color/white"
+            app:tabIndicatorColor="@color/blue_3"
+            app:tabIndicatorFullWidth="true"
+            app:tabIndicatorHeight="@dimen/roc5dp"
+            app:tabPaddingEnd="@dimen/roc10dp"
+            app:tabPaddingStart="@dimen/roc10dp"
+            app:tabSelectedTextColor="@color/blue_3"
+            app:tabTextColor="@color/gray" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</LinearLayout>

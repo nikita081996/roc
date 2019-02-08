@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/roc5dp"
+    android:layout_marginTop="@dimen/roc5dp"
+    android:layout_marginEnd="@dimen/roc5dp"
+    android:background="@color/white"
+    android:elevation="@dimen/roc2dp"
+    android:clickable="true"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:focusable="true">
+
+    <ImageView
+        android:id="@+id/marker_image"
+        android:layout_width="38dp"
+        android:layout_height="@dimen/roc50dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="12dp"
+        app:srcCompat="@drawable/ic_delete" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_vertical"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/side_view"
+            android:layout_width="@dimen/roc5dp"
+            android:layout_height="match_parent"
+            android:background="@color/green" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/roc10dp"
+            android:paddingEnd="@dimen/roc10dp"
+            android:paddingStart="@dimen/roc10dp"
+            android:paddingTop="@dimen/roc10dp">
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/calendar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="37dp"
+                    app:srcCompat="@drawable/ic_calender_plus_blue" />
+
+
+                <TextView
+                    android:id="@+id/opening"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_toRightOf="@+id/calendar"
+                    android:layout_marginLeft="@dimen/roc2dp"                    android:maxLines="1"
+                    android:text="Action Plaza"
+                    android:textColor="@color/blue" />
+
+                <TextView
+                    android:id="@+id/date_effective"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/opening"
+                    android:ellipsize="end"
+                    android:layout_marginLeft="@dimen/roc2dp"
+                    android:maxLength="10"
+                    android:maxLines="2"
+                    android:text="Action"
+                    android:textColor="@color/blue" />
+
+                <TextView
+                    android:id="@+id/posted_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="Posted" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/retailer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="49dp"
+                    android:text="Retailer: "
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/banner_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/retailer"
+                    android:layout_marginLeft="@dimen/roc10dp"
+                    android:maxLines="1"
+                    android:text="Banner name "
+                    android:textColor="@color/drawer_header_color" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/property"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="49dp"
+                    android:text="Property: "
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/store_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/roc7dp"
+                    android:layout_toRightOf="@+id/property"
+                    android:maxLines="1"
+                    android:text="Action Plaza"
+                    android:textColor="@color/drawer_header_color" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/distance_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="51dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Distance"
+                    android:textColor="@color/black"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/roc12dp"
+                    android:layout_toRightOf="@+id/distance_text"
+                    android:maxLines="1"
+                    android:text="NY"
+                    android:textColor="@color/drawer_header_color"
+                    android:textStyle="italic" />
+
+
+
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

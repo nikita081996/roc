@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/address"
+            android:textColor="@color/blue_2"
+            android:textSize="@dimen/roc12dp" />
+
+        <TextView
+            android:id="@+id/marker_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/roc2dp"
+            android:text="Infocity Patia"
+            android:textSize="@dimen/roc12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/replacing"
+            android:textColor="@color/blue_2"
+            android:textSize="@dimen/roc12dp" />
+
+        <TextView
+            android:id="@+id/marker_replacing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/roc2dp"
+            android:text="Infocity Patia"
+            android:textSize="@dimen/roc12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/distance_small"
+            android:textColor="@color/blue_2"
+            android:textSize="@dimen/roc12sp" />
+
+        <TextView
+            android:id="@+id/marker_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/roc2dp"
+            android:text="Infocity Patia"
+            android:textSize="@dimen/roc12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sqft"
+            android:textColor="@color/blue_2"
+            android:textSize="@dimen/roc12dp" />
+
+        <TextView
+            android:id="@+id/marker_sqft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/roc2dp"
+            android:text="Infocity Patia"
+            android:textSize="@dimen/roc12sp" />
+    </LinearLayout>
+
+</LinearLayout>

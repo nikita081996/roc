@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:elevation="@dimen/roc5dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/roc12dp"
+    android:paddingEnd="@dimen/roc10dp"
+    android:paddingStart="@dimen/roc10dp"
+    android:paddingTop="@dimen/roc12dp">
+
+    <LinearLayout
+        android:id="@+id/search_place"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/roc10dp"
+        android:layout_weight="1"
+        android:background="@drawable/white_box"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/roc5dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:text="@string/search_loc"
+            android:textColor="@color/light_blue"
+            android:textSize="@dimen/roc12sp"
+            android:ellipsize="end"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/roc2dp"
+            android:src="@drawable/ic_search"
+            android:tint="@color/light_blue" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/find_my_location_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/blue_box"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/roc5dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_loc_img" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/detect_loc"
+            android:textColor="@color/blue_3"
+            android:textSize="@dimen/roc12sp"
+            android:ellipsize="end"/>
+
+    </LinearLayout>
+</LinearLayout>

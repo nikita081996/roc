@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/filter_bar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/roc56dp"
+    android:background="@color/colorPrimary"
+    android:elevation="@dimen/roc3dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/roc5dp">
+
+    <ImageView
+        android:id="@+id/filter_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_filter_icon" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/roc5dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sort"
+            android:textColor="@color/filter_text_color"
+            android:textSize="@dimen/roc13sp" />
+
+        <Spinner
+            android:id="@+id/sort_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:spinnerMode="dropdown"
+            android:theme="@style/ThemeOverlay.AppCompat.Light" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/home_proximity_layout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/proximity"
+            android:textColor="@color/filter_text_color"
+            android:textSize="@dimen/roc13sp" />
+
+        <TextView
+            android:id="@+id/proximity_text"
+            android:text="Zip"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:maxLines="1"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/roc2dp"
+            android:background="#ffffff"
+            android:textSize="@dimen/roc12sp"
+            android:textColor="@color/blue_2"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/view_by"
+            android:textColor="@color/filter_text_color"
+            android:textSize="@dimen/roc13sp" />
+
+        <TextView
+            android:id="@+id/view_by"
+            android:text="@string/properties"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:textSize="@dimen/roc12dp"
+            android:textColor="@color/blue_2"
+            android:paddingStart="@dimen/roc2dp"
+            android:background="#ffffff" />
+    </LinearLayout>
+</LinearLayout>
+
+

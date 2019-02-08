@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/not_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/drawer_menu_item_color"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/roc20dp"
+        android:paddingTop="@dimen/roc10dp"
+        android:paddingEnd="@dimen/roc15dp"
+        android:paddingBottom="@dimen/roc10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_menu_notification" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/roc5dp"
+            android:layout_weight="1"
+            android:text="@string/notification_settings"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/roc15sp" />
+
+        <ImageView
+            android:id="@+id/notification_arrow_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/roc5dp"
+            android:src="@drawable/ic_arrow_down" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/roc1dp"
+        android:background="@color/light_blue" />
+    <!--this is Expandable layout which will show add new user form-->
+    <LinearLayout
+        android:id="@+id/notification_setting_layout_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/drawer_menu_item_lite_color"
+        android:orientation="vertical"
+        android:padding="@dimen/roc20dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/set_notification_for"
+            android:textColor="@color/drawer_header_color"
+            android:textSize="@dimen/roc15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/roc3dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/email_notifications"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/email_notification_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/square_radio"
+                android:button="@android:color/transparent"
+                android:padding="@dimen/roc2dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/push_notifications" />
+
+            <CheckBox
+                android:id="@+id/push_notification_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/square_radio"
+                android:button="@android:color/transparent"
+                android:padding="@dimen/roc2dp" />
+        </LinearLayout>
+
+        <!--drop down phase starts from here-->
+        <!--   ==========================================================================   -->
+
+        <!--Frequency-->
+        <LinearLayout
+            android:id="@+id/noti_frequency_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/roc10dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/roc5dp"
+                android:padding="@dimen/roc5dp"
+                android:text="@string/frequency"
+                android:textColor="@color/drawer_header_color"
+                android:textSize="@dimen/roc15sp" />
+
+            <com.roc.android.roc.base.FrequencySpinner
+                android:id="@+id/frequency_spinner"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableRight="@drawable/ic_arrow_down"
+                android:drawableTint="@color/blue_2" />
+        </LinearLayout>
+
+
+        <!--Proximity-->
+        <LinearLayout
+            android:id="@+id/noti_proximity_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/roc10dp"
+            android:background="@color/white"
+            android:onClick="showNotificationProximityDialog"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/roc5dp"
+                android:padding="@dimen/roc5dp"
+                android:text="@string/proximity"
+                android:textColor="@color/drawer_header_color"
+                android:textSize="@dimen/roc15sp" />
+
+            <TextView
+                android:id="@+id/noti_proximity_Text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableRight="@drawable/ic_arrow_down"
+                android:drawableTint="@color/blue_2"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:spinnerMode="dropdown"
+                android:textColor="@color/blue_2"
+                android:textSize="@dimen/roc12sp" />
+        </LinearLayout>
+
+        <!--Properties-->
+        <LinearLayout
+            android:id="@+id/noti_property_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/roc10dp"
+            android:background="@color/white"
+            android:onClick="showNotificationPropertyDialog"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/roc5dp"
+                android:padding="@dimen/roc5dp"
+                android:text="@string/properties"
+                android:textColor="@color/drawer_header_color"
+                android:textSize="@dimen/roc15sp" />
+
+            <TextView
+                android:id="@+id/noti_property_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableRight="@drawable/ic_arrow_down"
+                android:drawableTint="@color/blue_2"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/blue_2"
+                android:textSize="@dimen/roc12sp" />
+
+        </LinearLayout>
+
+        <!--state-->
+        <LinearLayout
+            android:id="@+id/noti_state_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/roc10dp"
+            android:background="@color/white"
+            android:onClick="showNotificationStateDialog"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/roc5dp"
+                android:padding="@dimen/roc5dp"
+                android:text="@string/state"
+                android:textColor="@color/drawer_header_color"
+                android:textSize="@dimen/roc15sp" />
+
+            <TextView
+                android:id="@+id/noti_states_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableRight="@drawable/ic_arrow_down"
+                android:drawableTint="@color/blue_2"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/blue_2"
+                android:textSize="@dimen/roc12sp" />
+
+        </LinearLayout>
+
+
+        <!--Retailers-->
+        <LinearLayout
+            android:id="@+id/noti_retailers_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/roc10dp"
+            android:background="@color/white"
+            android:onClick="showNotificationRetailerDialog"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/roc5dp"
+                android:padding="@dimen/roc5dp"
+                android:text="@string/retailers"
+                android:textColor="@color/drawer_header_color"
+                android:textSize="@dimen/roc15sp" />
+
+            <TextView
+                android:id="@+id/noti_retailers_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableRight="@drawable/ic_arrow_down"
+                android:drawableTint="@color/blue_2"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/blue_2"
+                android:textSize="@dimen/roc12sp" />
+        </LinearLayout>
+
+        <!--Save settings -->
+        <TextView
+            android:id="@+id/noti_save_changes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/roc10dp"
+            android:background="@color/blue_2"
+            android:gravity="center_vertical|center_horizontal"
+            android:onClick="saveNotificationSettings"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/roc5dp"
+            android:paddingBottom="@dimen/roc5dp"
+            android:text="@string/save_changes"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</LinearLayout>

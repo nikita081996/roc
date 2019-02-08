@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/roc100dp"
+    android:layout_marginBottom="@dimen/roc1dp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="?android:attr/selectableItemBackgroundBorderless">
+
+        <!--1 st Part-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:padding="@dimen/roc10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:text="@string/property_name"
+                        android:textColor="@color/filter_text_color"
+                        android:textSize="@dimen/roc12sp" />
+
+                    <TextView
+                        android:id="@+id/title_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingTop="@dimen/roc2dp"
+                        android:paddingBottom="@dimen/roc2dp"
+                        android:text="Atlantic Plaza"
+                        android:textColor="@color/light_blue"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:textSize="@dimen/roc17sp" />
+
+                </LinearLayout>
+
+                <include
+                    layout="@layout/retail_opening_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2" />
+
+                <include
+                    layout="@layout/retail_closing_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/roc5dp"
+                    android:paddingBottom="@dimen/roc5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/retailer"
+                        android:textColor="@color/filter_text_color"
+                        android:textSize="@dimen/roc10sp" />
+
+                    <TextView
+                        android:id="@+id/banner_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="208 Retailers"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/roc10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="@dimen/roc5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/distance"
+                        android:textColor="@color/filter_text_color"
+                        android:textSize="@dimen/roc10sp" />
+
+                    <TextView
+                        android:id="@+id/min_distance"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="7.2mi"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/roc10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/roc5dp"
+                    android:paddingBottom="@dimen/roc5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/updated"
+                        android:textColor="@color/filter_text_color"
+                        android:textSize="@dimen/roc10sp" />
+
+                    <TextView
+                        android:id="@+id/last_updated"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="06/12/2018"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/roc10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="@dimen/roc5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/state_capital"
+                        android:textColor="@color/filter_text_color"
+                        android:textSize="@dimen/roc10sp" />
+
+                    <TextView
+                        android:id="@+id/state_abbreviation"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="NY"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/roc10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="@dimen/roc5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/msa"
+                        android:textColor="@color/filter_text_color"
+                        android:textSize="@dimen/roc10sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/n_a"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/roc10sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/roc1dp"
+            android:layout_height="match_parent"
+            android:background="@color/lite_gray_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="9"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/roc5dp"
+                android:src="@drawable/ic_location_big"
+                android:tint="@color/blue_2" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right_big"
+                android:tint="@color/blue_2" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
